@@ -155,8 +155,9 @@ input, select, textarea {
 	}
 
 	strong, b {
-		font-weight: 300;
-		color: #666;
+		font-weight: 400;
+		color: #0a0a0a;
+		font-size: 1.1em;
 	}
 
 	em, i {
@@ -2169,7 +2170,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a.active span:before {
-						color: #e27689;
+						color: #4951c0;
 					}
 
 /* Footer */
@@ -2248,7 +2249,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/banner2.png");
 			}
 
 			#main > section.two {
