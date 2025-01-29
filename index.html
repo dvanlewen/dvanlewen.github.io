@@ -61,6 +61,25 @@
 			.image-text-layout.reverse {
     			flex-direction: row-reverse; /* Flip the text and media positions */
 			}
+			@media (max-width: 1150px) {
+				.image-text-layout {
+					flex-direction: column; /* Stacks text and image vertically */
+					text-align: center; /* Center-aligns text for better presentation */
+				}
+
+				.image-text-layout.reverse {
+					flex-direction: column; /* Stacks text and image vertically */
+					text-align: center; /* Center-aligns text for better presentation */
+				}
+
+				.text-content, .media-content {
+					flex: unset; /* Allows each section to take full width */
+				}
+
+				.media-content {
+					margin-top: 20px; /* Adds space between text and image */
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -83,7 +102,7 @@
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">About</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-microscope">Research</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">Teaching and Service</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">Teaching and Mentorship</span></a></li>
 								<li><a href="#publication" id="publication-link"><span class="icon solid fa-book">Publications</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
@@ -114,7 +133,7 @@
 
 							<header>
 								<h2 class="alt">About Me</h2>
-								<p>I am a PhD candidate in Mechanical Engineering at Boston University in the <a href="https://sites.bu.edu/mrl/">Material Robotics Lab</a>.<br />
+								<p>I am a Mechanical Engineering PhD candidate at Boston University in the <a href="https://sites.bu.edu/mrl/">Material Robotics Lab</a>.<br />
 								I am passionate about robotics and its applications in solving human-facing problems.<br />
 								My PhD research focuses on developing soft robotic platforms for neurosurgery and bronchoscopy that can safely interact with and navigate their respective environments.<br />
 								I am expecting to graduate Summer 2025 and am seeking exciting opportunities in robotics.
@@ -136,14 +155,15 @@
 								<h2>Research</h2>
 							</header>
 
-							<p>My research focuses on the development of soft robots that will pave the way towards enodscopic procedures that are safer, more effective, and more accessible.
+							<p>My research focuses on the development of soft robots that will pave the way towards endoscopic procedures that are safer, more effective, and more accessible.
 								I investigate this through the design, fabrication, and control of soft robots that can effectively interact with and navigate the surrounding anatomical environment.
-								These goals are realized in my two projects: (1) a Soft Robotic Bronchoscope with semi-autonomous navigation and safe biopsy/treatment of lung tumors and (2) an Origami-Inspired Soft Robotic Retractor for accessing deep regions of the brain and improving safety via force monitoring in neurosurgery.</p>
+								These goals are realized in my two projects: (1) a <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/aisy.202200326">Soft Robotic Bronchoscope</a> with semi-autonomous navigation and safe biopsy/treatment of lung tumors and (2) an <a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.731010/full">Origami-Inspired Soft Robotic Retractor</a> for accessing deep regions of the brain and improving safety via <a href="https://ieeexplore.ieee.org/abstract/document/10610863">force monitoring</a> in neurosurgery.</p>
 
 							<div class="research-section">
+								<section id="portfolio" class="three">
 								<article>
 									<header>
-										<h3>Soft Robotic Bronchoscopy</h3>
+										<h3>1. Soft Robotic Bronchoscopy</h3>
 									</header>
 									<!--This section justifies the text--> 
 									<section class="image-text-layout"> 
@@ -166,14 +186,11 @@
 										</div>
 										
 									</section>
-									<section class="image-text-layout">
-										<div class="text-content">
+
 											<p>
 												This video provides a demonstration of each fluidic actuator, 
 												a close up look at the needle deployment actuator, and the envisioned workflow demonstrated in-vitro.
 											</p>
-										</div>
-										<div class="media-content">
 											<div class="responsive-video">
 												<iframe 
 													width="560" 
@@ -186,8 +203,6 @@
 													allowfullscreen>
 												</iframe>
 											</div>
-										</div>
-									</section>
 									<section class="image-text-layout reverse">
 										<div class="text-content">
 											<p>
@@ -209,9 +224,10 @@
 										</div>
 									</section>
 								</article>
+							</section>
 								<article>
 									<header>
-										<h3>Origami-Inspired Neurosurgical Retractor</h3>
+										<h3>2. Origami-Inspired Neurosurgical Retractor</h3>
 									</header>
 									<section class="image-text-layout">
 										<div class="text-content">
@@ -241,31 +257,31 @@
 												The OSM is able to measure forces with a 0.25 N or 0.5 kPa resolution which is essential for preventing unnecessary damage to tissue.
 											</p>
 											<p>
-												I presented this work at IEEE ICRA 2024 (Yokohama), Hamlyn Symposium on Medical Robotics 2024, and MRS Fall 2024 (Boston).
+												I presented this work at <a href="https://ieeexplore.ieee.org/abstract/document/10610863">IEEE ICRA 2024</a> (Yokohama), Hamlyn Symposium on Medical Robotics 2024, and MRS Fall 2024 (Boston).
 											</p>
 										</div>
 										<div class="media-content">
 											<img src="images/OSMImage-03.png" alt="" />
-											<div class="responsive-video">
-												<iframe 
-												width="560" 
-												height="315" 
-												src="https://www.youtube.com/embed/08SyJ-7cF94?si=uZq360NxdZceHPuY" 
-												title="YouTube video player" 
-												frameborder="0" 
-												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-												referrerpolicy="strict-origin-when-cross-origin" 
-												allowfullscreen>
-												</iframe>
-											</div>
 										</div>
 									</section>
+									<div class="responsive-video">
+										<iframe 
+										width="560" 
+										height="315" 
+										src="https://www.youtube.com/embed/08SyJ-7cF94?si=uZq360NxdZceHPuY" 
+										title="YouTube video player" 
+										frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										referrerpolicy="strict-origin-when-cross-origin" 
+										allowfullscreen>
+										</iframe>
+									</div>
 								</article>
 								
 
 								<article>
 									<header>
-										<h3>Before my PhD</h3>
+										<h3>Projects Prior to my PhD</h3>
 									</header>
 									<section class="image-text-layout">
 										<div class="text-content">
@@ -290,7 +306,7 @@
 						<div class="container">
 
 							<header>
-								<h2>Teaching and Service</h2>
+								<h2>Teaching and Mentorship</h2>
 							</header>
 
 							<div class="teaching-service-section">
@@ -352,6 +368,7 @@
 						<header>
 							<h3>Journal Papers</h3>
 						</header>
+						<div class="text-content">
 						<ol>
 							<li>
 								<strong>Van Lewen, D.</strong>, Lu, Y., Julia-Wise, F., Vasowalla, A., Wu, C., Yeo, J., Billatos, E., Russo, S., "A Real-Time, Semi-Autonomous Navigation Platform for Soft Robotic Bronchoscopy" <em>Under Review</em>. 2025
@@ -363,9 +380,12 @@
 								Amadeo T., <strong>Van Lewen, D.</strong>, Janke T., Ranzani T., Devaiah A., Russo S., "Soft Robotic Deployable Origami Actuators for Neurosurgical Brain Retraction", <em>Frontiers in Robotics and AI</em>, 2022. <a href="https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.731010/full">Link</a>
 							</li>
 						</ol>
+						</div>
+						
 						<header>
 							<h3>Conference Proceedings</h3>
 						</header>
+						<div class="text-content">
 						<ol>
 							<li>
 								<strong>Van Lewen, D.</strong>,  Wang C., Lee H. C., Devaiah A., Upadhyay U., Russo S., "Monitoring Forces in Soft Robotic Brain Retraction via Origami Sensing Modules", <em>The Hamlyn Symposium on Medical Robotics</em>, 2024.
@@ -384,6 +404,7 @@
 								<strong>Van Lewen D.</strong>, Janke T., Lee H., Austin R., Billatos E., Russo S., "Actively Increasing Force Transmission of a Millimeter-Scale Soft Robot for Tissue Interactions in Minimally Invasive Surgery", <em>Materials Research Society - Spring Meeting</em>, 2023.
 							</li>
 						</ol>
+					</div>
 
 						<p>For more, check out my <a href="https://scholar.google.com/citations?user=i3_B-F0AAAAJ&hl=en&authuser=4">Google Scholar</a> profile.</p>
 					</div>
@@ -399,7 +420,7 @@
 							<p>
 								If you'd like to get in touch, fill out the form or check out my links at the bottom of the side panel!
 							</p>
-							<iframe 
+							<!--<iframe 
 								src="https://docs.google.com/forms/d/e/1FAIpQLSdwxNRv3G4KHSKlA4fzop_Pt0m3rg3PP2crAzr2IXfKyYwzaA/viewform?embedded=true" 
 								width="640" 
 								height="828" 
@@ -407,8 +428,8 @@
 								marginheight="0" 
 								marginwidth="0">
 								Loading…
-							</iframe>
-							<!--<form method="post" action="#">
+							</iframe>-->
+							<form method="post" action="https://formsubmit.co/dvl9815@gmail.com">
 								<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
@@ -419,7 +440,7 @@
 										<input type="submit" value="Send Message" />
 									</div>
 								</div>
-							</form>-->
+							</form>
 
 						</div>
 					</section>
