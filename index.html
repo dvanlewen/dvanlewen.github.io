@@ -166,7 +166,7 @@
 										<h3>Soft Robotic Bronchoscopy</h3>
 									</header>
 									<!--This section justifies the text--> 
-									<section class="image-text-layout"> 
+									<section id="bronchoscopy" class="image-text-layout"> 
 										<div class="text-content">
 											<p>
 												The soft robotic bronchoscope was developed to address the world's deadliest form of cancer: lung cancer. 
@@ -206,33 +206,52 @@
 									<section class="image-text-layout reverse">
 										<div class="text-content">
 											<p>
-												I have improved the robot in both hardware and software to enhance navigation, reduce surgeon cognitive load and make procedures overall more efficient.
-												I incorporated a 1mm microcamera for visualization and electromagnetic tracking for localization into a miniaturized 2.5mm soft continuum robot.
-												The robot can steer its tip in 1 direction and be inserted/rotated/translated from outside the patient via an external driving system. <br />
+												To deliver the above tools to the surgical site, I developed a soft robotic platform integrating both hardware and software to enhance navigation, reduce surgeon cognitive load and make procedures overall more efficient.
+												The platform relies on a UR5e robot arm and custom insertion mechanism to drive the soft continuum robot at the tip through the lungs.
+												The 2.5mm robot tip further integrates pneumatic steering for highly dexterous navigation into the lung periphery.
+												I incorporated a 1mm microcamera for tip visualization and an Aurora electromagnetic tracking sensor for localization within the lung environment.
+												<br />
 											</p>
 											<p>
-												On the <a href="">software</a> side, I developed a closed loop, semi-autonomous navigation algorithm for controlling the robot 
+												For the <a href="https://github.com/dvanlewen/Semi-Auto-Soft-Robot-Bronchoscopy">software</a> that controls the platform, I developed a closed loop, semi-autonomous navigation algorithm for controlling the robot 
 												with the surgeon in a supervisory role. 
 												I accomplished this using <a href="https://www.ros.org/">ROS2</a> to create a custom communication protocol between sensors and actuators.
-												Relying on <a href="https://github.com/THU-MIG/yolov10">YOLO</a> image processing, localization, and preoperative path planning,
+												Relying on a <a href="https://github.com/THU-MIG/yolov10">YOLO</a> machine learning vision algorithm, localization, and preoperative path planning,
 												the robot commands each actuator to navigate to within 1mm of the target location. 
 												A teleoperation controller was also developed for the surgeon to directly interface with the robot at any time during a procedure.
 											</p>
 											<p>
-												This work is currently under review. More details/media available soon.
+												This work was <a href="https://ieeexplore.ieee.org/document/10937746">published</a> in IEEE Robotics and Automation Letters. 
 											</p>
 										</div>
+
 										<div class="media-content">
-											<!--<img src="images/DanielProfile-01.png" alt="" />-->
+											<img src="images/RAL_fig-wb-06.png" alt="" />
 										</div>
+
 									</section>
+									<p>
+										This video provides a brief overview of the platform. More detailed information can be found in the paper and supplementary video at the journal website.
+									</p>
+									<div class="responsive-video">
+										<iframe 
+											width="560" 
+											height="315" 
+											src="https://www.youtube.com/embed/4Lzjmhk5CCM?si=O4vC_gRQorigi4_B" 
+											title="YouTube video player" 
+											frameborder="0" 
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+											referrerpolicy="strict-origin-when-cross-origin" 
+											allowfullscreen>
+										</iframe>
+									</div>
 								</article>
 								<hr>
 								<article>
 									<header>
 										<h3>Origami-Inspired Neurosurgical Retractor</h3>
 									</header>
-									<section class="image-text-layout">
+									<section id="neurosurgery" class="image-text-layout">
 										<div class="text-content">
 											<p>
 												The soft robotic retractor is a Miura origami patterned folding robot that is collapsible by applying vacuum pressures within the film encasing it.
@@ -286,7 +305,7 @@
 									<header>
 										<h3>Projects Prior to my PhD</h3>
 									</header>
-									<section class="image-text-layout">
+									<section id="priorwork" class="image-text-layout">
 										<div class="text-content">
 											<p>In my studies at UCLA, I was an undergraduate research assistant at the Bionics Lab working on the OTHER hand exoskeleton project where 
 										I designed and prototyped parts, soldered PCB components, and aided in the system assembly.</p>
@@ -322,7 +341,7 @@
 									<ul>
 										<li>ME 360 Product Design (Fall 2021)</li>
 										<li>ME 419 Heat Transfer (Spring 2022)</li>
-										<li>ME 571 Medical Robotics (2 lectures) (Fall 2023/Spring 2025)</li>
+										<li>ME 571 Medical Robotics (2 lectures) (Spring 2024/2025)</li>
 									</ul>
 								</div>
 								</article>
@@ -374,7 +393,7 @@
 						<div class="text-content">
 						<ol>
 							<li>
-								<strong>Van Lewen, D.</strong>, Lu, Y., Julia-Wise, F., Vasowalla, A., Wu, C., Yeo, J., Billatos, E., Russo, S., "A Real-Time, Semi-Autonomous Navigation Platform for Soft Robotic Bronchoscopy" <em>Under Review</em>. 2025
+								<strong>Van Lewen, D.</strong>, Lu, Y., Julia-Wise, F., Vasowalla, A., Wu, C., Yeo, J., Billatos, E., Russo, S., "A Real-Time, Semi-Autonomous Navigation Platform for Soft Robotic Bronchoscopy" <em>IEEE Robotics and Automation Letters</em>. 2025. <a href="https://ieeexplore.ieee.org/document/10937746">Link</a>
 							</li>
 							<li>
 								<strong>Van Lewen, D.</strong>, Janke T., Lee H., Austin R., Billatos E., Russo S., "A Millimeter-Scale Soft Robot for Tissue Biopsy Procedures", <em>Advanced Intelligent Systems</em>, 2023. <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/aisy.202200326">Link</a>
@@ -468,6 +487,8 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+				
+				
 
 	</body>
 </html>
